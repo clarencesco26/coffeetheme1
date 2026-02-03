@@ -1,6 +1,11 @@
 import React from 'react';
-import { Accordion, AccordionItem } from '@heroui/react';
 import { Container } from '../components';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '../components/ui/accordion';
 
 const faqs = [
   {
@@ -27,7 +32,7 @@ export const FAQSection: React.FC = () => {
       <Container>
         <div className="max-w-3xl mx-auto">
           <div className="text-center">
-            <div className="inline-flex items-center rounded-full bg-white/80 text-coffee-700 border border-coffee-100 px-4 py-1 text-xs font-semibold tracking-[0.2em] uppercase shadow-sm">
+            <div className="iinline-flex items-center text-coffee-700 text-xs font-semibold tracking-[0.2em] uppercase underline underline-offset-4 decoration-coffee-700">
               Common Questions
             </div>
             <h2 className="mt-6 text-4xl md:text-5xl font-display font-bold text-coffee-900">
@@ -38,18 +43,16 @@ export const FAQSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="mt-10 rounded-3xl bg-[#c7a785] shadow-xl border border-coffee-100 p-4 md:p-6">
-            <Accordion variant="splitted" selectionMode="multiple">
-              {faqs.map((faq) => (
-                <AccordionItem
-                  key={faq.question}
-                  aria-label={faq.question}
-                  title={faq.question}
-                  className="rounded-full border border-coffee-700"
-                >
-                  <p className="text-coffee-700 text-center">
+          <div className="mt-10 rounded-3xl bg-white shadow-xl border border-coffee-100 p-4 md:p-6">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={faq.question} value={`item-${index + 1}`}>
+                  <AccordionTrigger className="text-coffee-900">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-coffee-700">
                     {faq.answer}
-                  </p>
+                  </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>

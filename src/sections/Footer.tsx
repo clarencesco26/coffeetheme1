@@ -100,15 +100,19 @@ export const Footer: React.FC = () => {
                 <span className="text-balance">123 Brew Lane, Seattle, WA</span>
               </div>
               <p className="mt-2 text-coffee-700">Open daily · 7am–7pm</p>
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-flex items-center justify-center md:justify-start gap-2 text-sm font-semibold text-coffee-800 hover:text-coffee-900"
-              >
-                <MapPinIcon className="h-4 w-4 text-coffee-700" />
-                View on map
-              </a>
+              <div className="mt-4 overflow-hidden rounded-2xl border border-coffee-100 shadow-sm">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d286.5604900157772!2d120.92382485344807!3d14.354140715692823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d4940d951aed%3A0xe1af6535c25b9ed9!2s7-Eleven%201105%20Sabang%20Dasma%205!5e1!3m2!1sen!2sph!4v1770085943937!5m2!1sen!2sph"
+                  width="200"
+                  height="150"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Coffee Shop Location"
+                  className="h-[200px] w-full"
+                />
+              </div>
             </div>
 
             <div className="text-center md:text-left">

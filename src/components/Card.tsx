@@ -12,7 +12,7 @@ export const Card: React.FC<CardProps> = ({
   hover = false 
 }) => {
   const hoverStyles = hover 
-    ? 'hover:shadow-xl hover:-translate-y-1 cursor-pointer' 
+    ? 'hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] cursor-pointer' 
     : '';
 
   return (

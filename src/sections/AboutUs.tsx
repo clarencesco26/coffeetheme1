@@ -7,7 +7,7 @@ export const AboutUs: React.FC = () => {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center rounded-full bg-white/80 text-coffee-700 border border-coffee-100 px-4 py-1 text-xs font-semibold tracking-[0.2em] uppercase shadow-sm">
+            <div className="inline-flex items-center text-coffee-700 text-xs font-semibold tracking-[0.2em] uppercase underline underline-offset-4 decoration-coffee-700">
               Our Story
             </div>
             <h2 className="mt-6 text-4xl md:text-5xl font-display font-bold text-coffee-900 leading-tight">

@@ -63,10 +63,11 @@ export const MenuSection: React.FC = () => {
         {!isMenuOpen && (
           <CircularGallery
             items={bestSellers}
-            bend={2.8}
+            bend={0}
             textColor="#3a2e1e"
             borderRadius={0.12}
             font="600 22px 'Playfair Display', serif"
+            waveIntensity={0}
           />
         )}
       </div>

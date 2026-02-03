@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
       <Container className="relative">
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center rounded-full bg-white/80 text-coffee-700 border border-coffee-100 px-4 py-1 text-xs font-semibold tracking-[0.2em] uppercase shadow-sm">
+            <div className="inline-flex items-center text-coffee-700 text-xs font-semibold tracking-[0.2em] uppercase underline underline-offset-4 decoration-coffee-700">
               Freshly Brewed
             </div>
             <h1 className="mt-6 text-5xl md:text-6xl font-display font-bold text-coffee-900 leading-tight">

@@ -13,6 +13,7 @@ export interface CircularGalleryProps {
   font?: string;
   scrollSpeed?: number;
   scrollEase?: number;
+  waveIntensity?: number;
 }
 
 declare const CircularGallery: React.FC<CircularGalleryProps>;
