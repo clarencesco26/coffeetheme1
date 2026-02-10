@@ -27,13 +27,13 @@ export const CafeNavbar: React.FC = () => {
     <header>
       <nav
         aria-label="Primary"
-        className={`fixed z-50 w-full px-3 md:px-4 transition-colors duration-300  ${
+        className={`fixed left-0 top-0 z-50 w-full px-3 md:px-4 transition-colors duration-300  ${
           isScrolled ? 'border-transparent' : 'border-b border-coffee-100'
         }`}
       >
         <Container>
           <div
-            className={`mx-auto mt-2 transition-all duration-300 ${
+            className={`mx-auto transition-all duration-300 ${
               isScrolled
                 ? 'bg-white/80 max-w-5xl rounded-2xl border border-coffee-100/60 backdrop-blur-xl px-3 shadow-lg shadow-coffee-900/10'
                 : ''

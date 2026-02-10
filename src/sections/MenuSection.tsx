@@ -8,6 +8,7 @@ export const MenuSection: React.FC = () => {
   const [scale, setScale] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
+  const [isCompactView, setIsCompactView] = useState(false);
   const dragStart = useRef({ x: 0, y: 0 });
   const initialPos = useRef({ x: 0, y: 0 });
 
@@ -19,6 +20,14 @@ export const MenuSection: React.FC = () => {
       document.body.style.overflow = originalOverflow;
     };
   }, [isMenuOpen]);
+
+  React.useEffect(() => {
+    const media = window.matchMedia("(max-width: 1024px)");
+    const updateView = () => setIsCompactView(media.matches);
+    updateView();
+    media.addEventListener("change", updateView);
+    return () => media.removeEventListener("change", updateView);
+  }, []);
 
   const bestSellers = [
     {
@@ -67,6 +76,8 @@ export const MenuSection: React.FC = () => {
             textColor="#3a2e1e"
             borderRadius={0.12}
             font="600 22px 'Playfair Display', serif"
+            scrollSpeed={isCompactView ? 2.4 : 1.2}
+            scrollEase={isCompactView ? 0.12 : 0.08}
             waveIntensity={0}
           />
         )}
